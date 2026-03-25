@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+@theme {
+  --color-primary: #135bec;
+  --color-background-light: #f6f6f8;
+  --color-background-dark: #101622;
+  --font-display: "Inter", sans-serif;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-full: 9999px;
+}
+
+:root {
+  --p: #135bec;
+  --pc: #ffffff;
+  --s: #60a5fa;
+  --a: #34d399;
+  --n: #1f2937;
+  --b1: #101622;
+  --b2: #0d121d;
+  --b3: #1a2131;
+  --in: #3abff8;
+  --su: #36d399;
+  --wa: #fbbd23;
+  --er: #f87272;
+}
+
+body {
+  background-color: var(--color-background-dark);
+  color: #f1f5f9; /* slate-100 */
+}
