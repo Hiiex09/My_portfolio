@@ -1,5 +1,5 @@
-import profile from '../../public/Image.png'
-import Image from 'next/image';
+import profile from "../../public/Image.png";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -10,39 +10,40 @@ export default function Hero() {
             Available for new projects
           </div>
           <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white md:text-7xl lg:text-8xl">
-            Building the <span className="bg-gradient-to-r from-primary via-blue-500 to-indigo-400 bg-clip-text text-transparent">Digital Future</span>
+            Building the{" "}
+            <span className="bg-linear-to-r from-primary via-blue-500 to-indigo-400 bg-clip-text text-transparent">
+              Digital Future
+            </span>
           </h1>
           <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400 md:text-xl">
-            Junior Full-Stack Developer with
-            experience in building modern web
-            applications using Node.js, JavaScript,
-            TypeScript, Python, and C#. Skilled in
-            working with databases such as
-            MongoDB, SQL, and PostgreSQL, and
-            developing responsive user interfaces
-            with React, Next.js, Tailwind CSS, and
-            Bootstrap. Leverages AI tools to
-            accelerate development while following
-            best practices in full-stack architecture,
-            code quality, and performance.
+            Hi, I’m Devon Barangan. I’m a Junior Full-Stack Developer who builds
+            modern web applications using Node.js, React, Next.js, and more. I
+            work with databases and smart tools to create clean, fast, and
+            reliable solutions.
           </p>
           <div className="flex flex-wrap gap-4 pt-8 text-slate-500">
             <span className="flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800/50">
-              <span className="h-2 w-2 rounded-full bg-primary"></span> Frontend Developer
+              <span className="h-2 w-2 rounded-full bg-primary"></span> Frontend
+              Developer
             </span>
             <span className="flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800/50">
-              <span className="h-2 w-2 rounded-full bg-blue-400"></span> Backend Developer
+              <span className="h-2 w-2 rounded-full bg-blue-400"></span> Backend
+              Developer
             </span>
             <span className="flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800/50">
-              <span className="h-2 w-2 rounded-full bg-emerald-400"></span> Database
+              <span className="h-2 w-2 rounded-full bg-emerald-400"></span>{" "}
+              Database
             </span>
             <span className="flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800/50">
-              <span className="h-2 w-2 rounded-full bg-orange-400"></span> AI-Powered UI/UX
+              <span className="h-2 w-2 rounded-full bg-orange-400"></span>{" "}
+              AI-Powered UI/UX
             </span>
           </div>
           <div className="pt-12">
             <div className="flex items-center gap-2 animate-bounce opacity-50">
-              <span className="text-xs font-medium uppercase tracking-widest">Scroll to explore</span>
+              <span className="text-xs font-medium uppercase tracking-widest">
+                Scroll to explore
+              </span>
               <span className="material-symbols-outlined">expand_more</span>
             </div>
           </div>
