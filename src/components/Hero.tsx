@@ -9,7 +9,7 @@ export default function Hero() {
           <div className="badge badge-primary badge-outline py-4 px-4 text-xs font-semibold uppercase tracking-widest mb-6">
             Available for new projects
           </div>
-          <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white md:text-7xl lg:text-8xl">
+          <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-slate-200 dark:text-white md:text-7xl lg:text-8xl">
             Building the{" "}
             <span className="bg-linear-to-r from-primary via-blue-500 to-indigo-400 bg-clip-text text-transparent">
               Digital Future

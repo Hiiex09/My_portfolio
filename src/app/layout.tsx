@@ -8,8 +8,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Modern One-Page Developer Portfolio",
-  description: "Full-stack engineer specializing in high-performance web applications, scalable cloud architecture, and intuitive user experiences.",
+  title: "Devon Barangan - Full-Stack Developer",
+  description:
+    "Full-stack engineer specializing in high-performance web applications, scalable cloud architecture, and intuitive user experiences.",
 };
 
 export default function RootLayout({
@@ -20,12 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" data-theme="dark">
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body
-        className={`${inter.variable} font-display antialiased`}
-        id="top"
-      >
+      <body className={`${inter.variable} font-display antialiased`} id="top">
         {children}
       </body>
     </html>
