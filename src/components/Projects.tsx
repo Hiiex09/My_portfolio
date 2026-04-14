@@ -24,7 +24,7 @@ export default function Projects() {
         "The Barangay Information Portal System is a web-based application designed to digitize and centralize barangay services in the Philippines. It aims to improve communication between barangay officials and residents, reduce manual processes, and promote transparency, efficiency, and accessibility in local governance.",
       bgImage: "/BIPS.png",
       tags: ["React", "DaisyUI", "MongoDB", "Node.js"],
-      links: "Upcoming",
+      links: "#",
     },
   ];
 
@@ -74,7 +74,7 @@ export default function Projects() {
                   href={project.links}
                   className="btn btn-link btn-xs normal-case font-bold text-primary gap-2 no-underline"
                 >
-                  View Case Study
+                  View Project
                   <span className="material-symbols-outlined text-sm">
                     arrow_forward
                   </span>
