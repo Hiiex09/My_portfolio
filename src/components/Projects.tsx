@@ -1,87 +1,34 @@
-import React from "react";
+import Image from "next/image";
+import Icon from "./Icon";
+
+const projects = [
+  { title: "HTML & CSS Cheat Sheet", description: "A beginner-friendly guide to web development, organized as a clear path from page structure to visual styling.", bgImage: "/HTMLCSS.png", tags: ["HTML", "CSS"], link: "https://html-css-dusky-two.vercel.app/", status: "Live project" },
+  { title: "Katalk", description: "A real-time chat application built with the MERN stack and live messaging through Socket.io.", bgImage: "/Katalk.png", tags: ["React", "MongoDB", "Node.js", "Socket.io"], link: "https://katalk.onrender.com/login", status: "Live project" },
+  { title: "Barangay Information Portal", description: "A community platform designed to centralize barangay services, improve communication, and make local information easier to access.", bgImage: "/BIPS.png", tags: ["React", "MongoDB", "Node.js"], link: null, status: "In progress" },
+];
 
 export default function Projects() {
-  const projects = [
-    {
-      title: "HTML & CSS Cheat Sheet",
-      description:
-        "Beginner’s Guide to Web Development. A structured path from skeleton to style.",
-      bgImage: "/HTMLCSS.png",
-      tags: ["HTML", "CSS"],
-      links: "https://html-css-dusky-two.vercel.app/",
-    },
-    {
-      title: "Katalk",
-      description:
-        "Chat application with real-time messaging built using MERN stack.",
-      bgImage: "/Katalk.png",
-      tags: ["React", "DaisyUI", "MongoDB", "Node.js", "Socket.io"],
-      links: "https://katalk.onrender.com/login",
-    },
-    {
-      title: "Barangay Information Portal System (New Project In Progress)",
-      description:
-        "The Barangay Information Portal System is a web-based application designed to digitize and centralize barangay services in the Philippines. It aims to improve communication between barangay officials and residents, reduce manual processes, and promote transparency, efficiency, and accessibility in local governance.",
-      bgImage: "/BIPS.png",
-      tags: ["React", "DaisyUI", "MongoDB", "Node.js"],
-      links: "#",
-    },
-  ];
-
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24 md:px-12" id="projects">
-      <div className="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
-        <div>
-          <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
-            Selected Projects
-          </h2>
-          <div className="mt-4 h-1 w-20 bg-primary"></div>
-        </div>
-        <p className="max-w-md text-slate-500">
-          A curated selection of my recent work in fintech, e-commerce, and
-          enterprise solutions.
-        </p>
+    <section className="mx-auto max-w-7xl scroll-mt-18 px-6 py-20 sm:py-24 lg:px-12" id="projects" aria-labelledby="projects-title">
+      <div className="mb-12 flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
+        <div className="max-w-xl"><p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Selected work</p><h2 id="projects-title" className="mt-3 text-3xl font-semibold tracking-tight text-copy sm:text-4xl">Projects built to solve real problems</h2></div>
+        <p className="max-w-sm text-sm leading-6 text-subtle">A selection of learning tools, communication products, and community-focused software.</p>
       </div>
-      <div className="grid gap-8 lg:grid-cols-2">
+      <div className="grid gap-6 lg:grid-cols-2">
         {projects.map((project, index) => (
-          <div
-            key={index}
-            className="card card-compact dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800 transition-all hover:border-primary/50 overflow-hidden bg-base-200/50"
-          >
-            <figure className="aspect-video w-full overflow-hidden p-2">
-              <div
-                className="h-full w-full bg-cover bg-center rounded-lg transition-transform duration-500 hover:scale-105"
-                style={{ backgroundImage: `url('${project.bgImage}')` }}
-              ></div>
+          <article key={project.title} className={`group overflow-hidden rounded-xl border border-line/45 bg-surface shadow-sm shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-primary/40 hover:bg-surface-raised hover:shadow-xl hover:shadow-black/30 ${index === 0 ? "lg:col-span-2 lg:grid lg:grid-cols-2" : ""}`}>
+            <figure className={`relative overflow-hidden bg-surface-raised ${index === 0 ? "aspect-video lg:aspect-auto" : "aspect-video"}`}>
+              <Image src={project.bgImage} alt={`${project.title} preview`} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover transition duration-500 group-hover:scale-[1.03]" />
+              <div className="absolute inset-0 bg-linear-to-t from-canvas/40 to-transparent" />
             </figure>
-            <div className="card-body p-6">
-              <div className="card-actions justify-start mb-3">
-                {project.tags.map((tag, tagIndex) => (
-                  <div
-                    key={tagIndex}
-                    className="badge badge-primary badge-outline rounded uppercase text-[10px]"
-                  >
-                    {tag}
-                  </div>
-                ))}
-              </div>
-              <h2 className="card-title text-2xl font-bold">{project.title}</h2>
-              <p className="text-slate-600 dark:text-slate-400 mb-4">
-                {project.description}
-              </p>
-              <div className="card-actions">
-                <a
-                  href={project.links}
-                  className="btn btn-link btn-xs normal-case font-bold text-primary gap-2 no-underline"
-                >
-                  View Project
-                  <span className="material-symbols-outlined text-sm">
-                    arrow_forward
-                  </span>
-                </a>
-              </div>
+            <div className="flex flex-col p-6 sm:p-8">
+              <div className="mb-4 flex flex-wrap gap-2">{project.tags.map((tag) => <span key={tag} className="rounded-md border border-line/50 bg-surface-soft/35 px-2 py-1 text-xs font-medium text-muted">{tag}</span>)}</div>
+              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-subtle">{project.status}</p>
+              <h3 className="mt-2 text-2xl font-semibold tracking-tight text-copy">{project.title}</h3>
+              <p className="mt-4 max-w-prose text-sm leading-6 text-subtle">{project.description}</p>
+              <div className="mt-auto pt-6">{project.link ? <a href={project.link} target="_blank" rel="noreferrer" className="inline-flex min-h-11 items-center gap-2 rounded-lg text-sm font-semibold text-primary transition hover:text-copy">View project <Icon name="arrow-up-right" className="h-4 w-4" /></a> : <span className="inline-flex items-center text-sm font-semibold text-subtle">Case study coming soon</span>}</div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
     </section>

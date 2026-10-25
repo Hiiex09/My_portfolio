@@ -1,63 +1,26 @@
-import profile from "../../public/Image.png";
 import Image from "next/image";
+import profile from "../../public/Image.png";
+import Icon from "./Icon";
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-24 lg:px-12 lg:py-40">
-      <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center">
-        <div className="lg:col-span-8 text-left">
-          <div className="badge badge-primary badge-outline py-4 px-4 text-xs font-semibold uppercase tracking-widest mb-6">
-            Available for new projects
+    <section className="relative overflow-hidden pt-18" aria-labelledby="hero-title">
+      <div className="pointer-events-none absolute left-1/2 top-0 h-120 w-120 -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
+      <div className="relative mx-auto grid min-h-[calc(100svh-4.5rem)] max-w-7xl items-center gap-12 px-6 py-16 lg:grid-cols-12 lg:px-12 lg:py-24">
+        <div className="text-left lg:col-span-7">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary/25 bg-primary/8 px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-primary"><span className="h-2 w-2 rounded-full bg-primary" />Available for opportunities</div>
+          <h1 id="hero-title" className="max-w-4xl text-5xl font-bold leading-[1.05] tracking-[-0.04em] text-copy sm:text-6xl lg:text-7xl">I build dependable web products from <span className="text-primary">interface to API.</span></h1>
+          <p className="mt-6 max-w-prose text-base leading-7 text-muted sm:text-lg sm:leading-8">I&apos;m Devon, a junior full-stack developer focused on thoughtful interfaces, practical backends, and clean, maintainable code.</p>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-surface shadow-sm transition hover:bg-primary-strong hover:text-copy hover:shadow-md active:scale-[0.98]" href="#projects">Explore my work <Icon name="arrow-down" className="h-4 w-4" /></a>
+            <a className="inline-flex min-h-12 items-center justify-center rounded-lg border border-line bg-surface/70 px-6 py-3 text-sm font-semibold text-copy transition hover:border-primary/50 hover:bg-surface-raised" href="mailto:barangandevon@gmail.com">Get in touch</a>
           </div>
-          <h1 className="text-5xl font-black leading-[1.1] tracking-tight text-slate-200 dark:text-white md:text-7xl lg:text-8xl">
-            Building the{" "}
-            <span className="bg-linear-to-r from-primary via-blue-500 to-indigo-400 bg-clip-text text-transparent">
-              Digital Future
-            </span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-600 dark:text-slate-400 md:text-xl">
-            Hi, I’m Devon Barangan. I’m a Junior Full-Stack Developer who builds
-            modern web applications using Node.js, React, Next.js, and more. I
-            work with databases and smart tools to create clean, fast, and
-            reliable solutions.
-          </p>
-          <div className="flex flex-wrap gap-4 pt-8 text-slate-500">
-            <span className="flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800/50">
-              <span className="h-2 w-2 rounded-full bg-primary"></span> Frontend
-              Developer
-            </span>
-            <span className="flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800/50">
-              <span className="h-2 w-2 rounded-full bg-blue-400"></span> Backend
-              Developer
-            </span>
-            <span className="flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800/50">
-              <span className="h-2 w-2 rounded-full bg-emerald-400"></span>{" "}
-              Database
-            </span>
-            <span className="flex items-center gap-2 rounded-lg bg-slate-100 px-4 py-2 dark:bg-slate-800/50">
-              <span className="h-2 w-2 rounded-full bg-orange-400"></span>{" "}
-              AI-Powered UI/UX
-            </span>
-          </div>
-          <div className="pt-12">
-            <div className="flex items-center gap-2 animate-bounce opacity-50">
-              <span className="text-xs font-medium uppercase tracking-widest">
-                Scroll to explore
-              </span>
-              <span className="material-symbols-outlined">expand_more</span>
-            </div>
-          </div>
+          <div className="mt-10 flex flex-wrap gap-x-6 gap-y-3 border-t border-line/40 pt-6 text-sm text-subtle"><span>React &amp; Next.js</span><span>Node.js &amp; Python</span><span>SQL &amp; MongoDB</span></div>
         </div>
-        <div className="lg:col-span-4 flex items-center justify-center">
-          <div className="relative h-80 w-80 md:h-80 md:w-80 overflow-hidden rounded-2xl bg-slate-200 dark:bg-slate-800 shadow-2xl transition-transform duration-500">
-            <div className="absolute inset-0 z-10"></div>
-            <Image
-              src={profile}
-              alt="Profile Image"
-              fill
-              className="object-cover transition-all duration-700"
-              unoptimized
-            />
+        <div className="flex items-center justify-center lg:col-span-5 lg:justify-end">
+          <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-2xl border border-line/50 bg-surface shadow-2xl shadow-black/40">
+            <Image src={profile} alt="Devon Barangan" fill priority sizes="(max-width: 1024px) 384px, 33vw" className="object-cover" />
+            <div className="absolute inset-x-0 bottom-0 bg-linear-to-t from-canvas via-canvas/75 to-transparent px-6 pb-6 pt-20"><p className="text-sm font-semibold text-copy">Devon Barangan</p><p className="mt-1 text-sm text-muted">Full-stack developer · Philippines</p></div>
           </div>
         </div>
       </div>
